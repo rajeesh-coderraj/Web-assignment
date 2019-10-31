@@ -1,0 +1,18 @@
+const express=require('express');
+const app=express();
+const path=require('path');
+const bodyParser=require('body-parser');
+const router=express.Router();
+app.use(bodyParser());
+app.use('view engine','ejs');
+.get('/',function(req,res){
+  res.sendFile(path.join(__dirname+'/index.ejs'));
+  var name='';
+  name=req.body.hel;
+});
+  router.post('/',function(req,res){
+    var name='';
+    name=req.body.hel;
+});
+app.use('/', router);
+app.listen(3000);
